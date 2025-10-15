@@ -75,7 +75,7 @@ export const ProjectCard = ({
           <div className="relative">
             <img
               className="w-12 h-12 rounded-lg shadow-lg"
-              src="/december-logo.png"
+              src="/toyon-logo.png"
               alt="Project Icon"
             />
             <div

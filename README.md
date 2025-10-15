@@ -2,25 +2,25 @@
 
 <div align="center">
 
-<h3 align="center">Say hi to December ☃️</h3>
+<h3 align="center">Say hi to Toyon ☃️</h3>
 
   <p align="center">
-    December is an open-source alternative to AI-powered development platforms like Loveable, Replit, and Bolt that you can run locally with your own API keys, ensuring complete privacy and significant cost savings. 
+    Toyon is an open-source alternative to AI-powered development platforms like Loveable, Replit, and Bolt that you can run locally with your own API keys, ensuring complete privacy and significant cost savings. 
     <br />
     <br />
-    December lets you build full-stack applications from simple text prompts using AI.
+    Toyon lets you build full-stack applications from simple text prompts using AI.
     <br />
     <br />
     <a href="#get-started">Get started</a>
     ·
-    <a href="https://github.com/ntegrals/december/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=">Report Bug</a>
+    <a href="https://github.com/ntegrals/Toyon/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=">Report Bug</a>
     ·
-    <a href="https://github.com/ntegrals/december/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.md&title=">Request Feature</a>
+    <a href="https://github.com/ntegrals/Toyon/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.md&title=">Request Feature</a>
 
   </p>
 </div>
-<a href="https://github.com/ntegrals/december">
-    <img src=".assets/preview.png" alt="December Preview">
+<a href="https://github.com/ntegrals/Toyon">
+    <img src=".assets/preview.png" alt="Toyon Preview">
   </a>
 
 ## Features
@@ -45,7 +45,7 @@
 1. Clone the repo
 
    ```sh
-   git clone https://github.com/ntegrals/december
+   git clone https://github.com/ntegrals/toyon
    ```
 
 2. Get an API Key from any OpenAI sdk compatible provider (e.g. OpenAI, Claude, Ollama, OpenRouter, etc.) and set it in the `config.ts` file.
@@ -82,11 +82,11 @@
 
    The backend will run on port 4000, and the frontend will run on port 3000.
 
-   You can now start building your applications with December! 🥳
+   You can now start building your applications with Toyon! 🥳
 
 <!-- ## Demo
 
-You can test the December here: [https://december.ai](https://december.ai) -->
+You can test the Toyon here: [https://Toyon.ai](https://Toyon.ai) -->
 
 ## Motivation
 
@@ -96,19 +96,19 @@ Until recently, building a local alternative that matched the speed and capabili
 
 I would love for this repo to become the go-to place for people who want to run their own AI-powered development environment. I've been working on this project for a while now and I'm really excited to share it with you.
 
-## Why run December locally?
+## Why run Toyon locally?
 
-Building applications shouldn't require expensive subscriptions or sacrificing your privacy. December gives you the power of platforms like Loveable, Replit, and Bolt without the downsides:
+Building applications shouldn't require expensive subscriptions or sacrificing your privacy. Toyon gives you the power of platforms like Loveable, Replit, and Bolt without the downsides:
 
 - **Full Control & Privacy** - Your code, ideas, and projects never leave your machine. No cloud storage, no data mining, no vendor lock-in
 - **Your API Keys, Your Costs** - Use your own OpenAI API key and pay only for what you use. No monthly subscriptions or usage limits imposed by third parties
 - **Complete Feature Access** - No paywalls, premium tiers, or artificial limitations. Every feature is available from day one
 
-Most cloud-based AI development platforms charge $20-100+ per month while limiting your usage and storing your intellectual property on their servers. With December, a $5 OpenAI API credit can generate dozens of complete applications, and you keep full ownership of everything you create.
+Most cloud-based AI development platforms charge $20-100+ per month while limiting your usage and storing your intellectual property on their servers. With Toyon, a $5 OpenAI API credit can generate dozens of complete applications, and you keep full ownership of everything you create.
 
 The local-first approach means you can work offline, modify the platform itself, and never worry about service outages or policy changes affecting your projects. Your development environment evolves with your needs, not a company's business model.
 
-December proves that you don't need to choose between powerful AI assistance and maintaining control over your work. Run it locally, use your own API keys, and build without boundaries.
+Toyon proves that you don't need to choose between powerful AI assistance and maintaining control over your work. Run it locally, use your own API keys, and build without boundaries.
 
 ## Contact
 
@@ -120,13 +120,13 @@ Thanks and have an awesome day 👋
 
 ## Disclaimer
 
-December, is an experimental application and is provided "as-is" without any warranty, express or implied. By using this software, you agree to assume all risks associated with its use, including but not limited to data loss, system failure, or any other issues that may arise.
+Toyon, is an experimental application and is provided "as-is" without any warranty, express or implied. By using this software, you agree to assume all risks associated with its use, including but not limited to data loss, system failure, or any other issues that may arise.
 
-The developers and contributors of this project do not accept any responsibility or liability for any losses, damages, or other consequences that may occur as a result of using this software. You are solely responsible for any decisions and actions taken based on the information provided by December.
+The developers and contributors of this project do not accept any responsibility or liability for any losses, damages, or other consequences that may occur as a result of using this software. You are solely responsible for any decisions and actions taken based on the information provided by Toyon.
 
 Please note that the use of the large language models can be expensive due to its token usage. By utilizing this project, you acknowledge that you are responsible for monitoring and managing your own token usage and the associated costs. It is highly recommended to check your API usage regularly and set up any necessary limits or alerts to prevent unexpected charges.
 
-By using December, you agree to indemnify, defend, and hold harmless the developers, contributors, and any affiliated parties from and against any and all claims, damages, losses, liabilities, costs, and expenses (including reasonable attorneys' fees) arising from your use of this software or your violation of these terms.
+By using Toyon, you agree to indemnify, defend, and hold harmless the developers, contributors, and any affiliated parties from and against any and all claims, damages, losses, liabilities, costs, and expenses (including reasonable attorneys' fees) arising from your use of this software or your violation of these terms.
 
 <!-- LICENSE -->
 

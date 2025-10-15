@@ -486,7 +486,7 @@ export const WorkspaceDashboard = ({
       <div className="flex items-center gap-2 mb-2">
         <img
           className="w-4 h-4 rounded"
-          src="/december-logo.png"
+          src="/toyon-logo.png"
           alt="Assistant Avatar"
         />
         <span className="text-sm font-medium text-white/90">Assistant</span>
@@ -532,12 +532,7 @@ export const WorkspaceDashboard = ({
               href="/"
               className="flex items-center gap-3 text-white/90 hover:text-white transition-colors group"
             >
-              <span
-                className="text-lg bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent"
-                style={{ fontFamily: "XSpace, monospace" }}
-              >
-                DECEMBER
-              </span>
+              <img src="/westly-logo.png" alt="Toyon" className="w-8 h-8" />
             </Link>
 
             <div className="h-6 w-px bg-gray-700/50 mx-2" />
@@ -564,13 +559,6 @@ export const WorkspaceDashboard = ({
           </div>
 
           <div className="hidden md:flex items-center gap-2 text-sm text-white/60 relative z-10">
-            <Link
-              href="/"
-              className="hover:text-white transition-colors flex items-center gap-1"
-            >
-              <Home className="w-3.5 h-3.5" />
-              <span>Projects</span>
-            </Link>
             <span>/</span>
             <span className="text-white font-medium">
               {containerId.slice(0, 8)}

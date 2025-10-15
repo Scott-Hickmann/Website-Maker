@@ -51,6 +51,7 @@ router.post("/create", async (req, res) => {
 
     res.status(500).json({
       success: false,
+      containerId: containerId,
       error: error instanceof Error ? error.message : "Unknown error",
     });
   }

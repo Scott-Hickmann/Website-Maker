@@ -79,26 +79,12 @@ export const ProjectPromptInterface = ({
     setShowModelDropdown(false);
   };
 
-  const handleImageClick = () => {
-    toast("Image upload only works within a project right now!", {
-      icon: "🖼️",
-      duration: 2000,
-    });
-  };
-
-  const handleSparkleClick = () => {
-    toast("AI suggestions are coming soon!", {
-      icon: "✨",
-      duration: 2000,
-    });
-  };
-
   return (
     <>
       <div className="text-center mb-10">
         <h1
           style={{ fontFamily: "Suisse" }}
-          className="text-2xl font-semibold mb-6 bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent"
+          className="text-2xl font-semibold mb-6 bg-gradient-to-r from-gray-900 via-gray-700 to-gray-600 bg-clip-text text-transparent"
         >
           What do you want to build?
         </h1>
@@ -107,7 +93,7 @@ export const ProjectPromptInterface = ({
       <div className="group/form-container content-center relative mx-auto w-full max-w-5xl mb-16">
         <div className="relative z-10 flex w-full flex-col">
           <div className="rounded-b-xl">
-            <form className="focus-within:border-gray-500/60 bg-gray-900/30 border-gray-700/30 relative rounded-2xl border shadow-[0_8px_32px_rgba(0,0,0,0.12)] transition-all duration-300 backdrop-blur-xl bg-gradient-to-br from-white/[0.08] to-white/[0.02]">
+            <form className="focus-within:border-gray-300 bg-white/90 border-gray-200 relative rounded-2xl border shadow-[0_8px_32px_rgba(0,0,0,0.08)] transition-all duration-300 backdrop-blur-xl">
               <div className="relative z-10 grid min-h-0 rounded-2xl">
                 <label className="sr-only" htmlFor="chat-main-textarea">
                   Chat Input
@@ -115,13 +101,13 @@ export const ProjectPromptInterface = ({
                 <textarea
                   id="chat-main-textarea"
                   name="content"
-                  placeholder="Ask December to build..."
+                  placeholder="Ask Toyon to build..."
                   spellCheck="false"
                   value={promptInput}
                   onChange={(e) => setPromptInput(e.target.value)}
                   onKeyDown={handlePromptKeyDown}
                   disabled={isCreatingFromPrompt}
-                  className="resize-none overflow-auto w-full flex-1 bg-transparent p-4 text-sm outline-none ring-0 placeholder:text-gray-400 text-white disabled:opacity-50"
+                  className="resize-none overflow-auto w-full flex-1 bg-transparent p-4 text-sm outline-none ring-0 placeholder:text-gray-400 text-gray-900 disabled:opacity-50"
                   style={{
                     height: "54px",
                     minHeight: "54px",
@@ -129,118 +115,15 @@ export const ProjectPromptInterface = ({
                   }}
                 />
                 <div className="flex items-center gap-3 px-4 pb-3">
-                  <div className="flex items-center gap-2">
-                    <div className="relative">
-                      <button
-                        className="flex items-center gap-2 px-3 py-1.5 bg-gray-800/20 hover:bg-gray-700/30 border border-gray-600/20 hover:border-gray-500/30 rounded-lg text-xs font-medium text-gray-300 hover:text-white transition-all duration-300 backdrop-blur-md bg-gradient-to-r from-white/[0.05] to-transparent cursor-pointer"
-                        type="button"
-                        onClick={() => {
-                          setShowCommunityDropdown(!showCommunityDropdown);
-                          setShowModelDropdown(false);
-                        }}
-                      >
-                        <Sparkles className="w-3.5 h-3.5 text-purple-400" />
-                        <span>{selectedTemplate}...</span>
-                        <svg
-                          height="12"
-                          strokeLinejoin="round"
-                          viewBox="0 0 16 16"
-                          width="12"
-                          className={`text-gray-400 transition-transform duration-200 ${
-                            showCommunityDropdown ? "rotate-180" : ""
-                          }`}
-                        >
-                          <path
-                            fillRule="evenodd"
-                            clipRule="evenodd"
-                            d="M12.0607 6.74999L11.5303 7.28032L8.7071 10.1035C8.31657 10.4941 7.68341 10.4941 7.29288 10.1035L4.46966 7.28032L3.93933 6.74999L4.99999 5.68933L5.53032 6.21966L7.99999 8.68933L10.4697 6.21966L11 5.68933L12.0607 6.74999Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </button>
-
-                      {showCommunityDropdown && (
-                        <div className="absolute top-full left-0 mt-2 w-48 bg-gray-900/90 backdrop-blur-xl border border-gray-600/30 rounded-lg shadow-xl z-50 bg-gradient-to-br from-white/[0.08] to-white/[0.02]">
-                          {communityOptions.map((option) => (
-                            <button
-                              key={option}
-                              onClick={() => handleCommunitySelect(option)}
-                              className="w-full text-left px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/10 first:rounded-t-lg last:rounded-b-lg transition-all duration-200 cursor-pointer"
-                            >
-                              {option}
-                            </button>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-
-                    <div className="relative">
-                      <button
-                        className="flex items-center gap-2 px-3 py-1.5 bg-gray-800/20 hover:bg-gray-700/30 border border-gray-600/20 hover:border-gray-500/30 rounded-lg text-xs font-medium text-gray-300 hover:text-white transition-all duration-300 backdrop-blur-md bg-gradient-to-r from-white/[0.05] to-transparent cursor-pointer"
-                        type="button"
-                        onClick={() => {
-                          setShowModelDropdown(!showModelDropdown);
-                          setShowCommunityDropdown(false);
-                        }}
-                      >
-                        <span>{selectedModel}</span>
-                        <svg
-                          height="12"
-                          strokeLinejoin="round"
-                          viewBox="0 0 16 16"
-                          width="12"
-                          className={`text-gray-400 transition-transform duration-200 ${
-                            showModelDropdown ? "rotate-180" : ""
-                          }`}
-                        >
-                          <path
-                            fillRule="evenodd"
-                            clipRule="evenodd"
-                            d="M12.0607 6.74999L11.5303 7.28032L8.7071 10.1035C8.31657 10.4941 7.68341 10.4941 7.29288 10.1035L4.46966 7.28032L3.93933 6.74999L4.99999 5.68933L5.53032 6.21966L7.99999 8.68933L10.4697 6.21966L11 5.68933L12.0607 6.74999Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </button>
-
-                      {showModelDropdown && (
-                        <div className="absolute top-full left-0 mt-2 w-40 bg-gray-900/90 backdrop-blur-xl border border-gray-600/30 rounded-lg shadow-xl z-50 bg-gradient-to-br from-white/[0.08] to-white/[0.02]">
-                          {modelOptions.map((option) => (
-                            <button
-                              key={option}
-                              onClick={() => handleModelSelect(option)}
-                              className="w-full text-left px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/10 first:rounded-t-lg last:rounded-b-lg transition-all duration-200 cursor-pointer"
-                            >
-                              {option}
-                            </button>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  </div>
-
                   <div className="ml-auto flex items-center gap-2">
-                    <button
-                      className="p-2 text-gray-400 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300 backdrop-blur-sm cursor-pointer"
-                      type="button"
-                      onClick={handleSparkleClick}
-                    >
-                      <Sparkles className="w-4 h-4" />
-                    </button>
-                    <button
-                      className="p-2 text-gray-400 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300 backdrop-blur-sm cursor-pointer"
-                      type="button"
-                      onClick={handleImageClick}
-                    >
-                      <Paperclip className="w-4 h-4" />
-                    </button>
                     <button
                       onClick={handlePromptSubmit}
                       disabled={!promptInput.trim() || isCreatingFromPrompt}
-                      className="flex items-center justify-center w-9 h-9 bg-white/90 text-black hover:bg-white disabled:bg-gray-600/50 disabled:text-gray-400 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl disabled:cursor-not-allowed cursor-pointer backdrop-blur-sm"
+                      className="flex items-center justify-center w-9 h-9 bg-gray-900 text-white hover:bg-gray-800 disabled:bg-gray-300 disabled:text-gray-500 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl disabled:cursor-not-allowed cursor-pointer"
                       type="submit"
                     >
                       {isCreatingFromPrompt ? (
-                        <div className="w-4 h-4 border-2 border-gray-400 border-t-transparent rounded-full animate-spin" />
+                        <div className="w-4 h-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin" />
                       ) : (
                         <svg
                           height="16"

@@ -19,23 +19,23 @@ export const ProjectsPage = () => {
         selectedTemplate={selectedTemplate}
         onTemplateChange={setSelectedTemplate}
       />
-      <TemplatesSection
+      {/* <TemplatesSection
         selectedTemplate={selectedTemplate}
         onTemplateSelect={handleTemplateSelect}
-      />
-      <div className="mt-16">
+      /> */}
+      {/* <div className="mt-16">
         <div className="flex items-center justify-between mb-8">
           <div>
             <h2 className="text-2xl font-bold text-white mb-2">
               Your Projects
             </h2>
             <p className="text-gray-400">
-              Manage and access your December projects.
+              Manage and access your Toyon projects.
             </p>
           </div>
         </div>
         <ProjectsGrid />
-      </div>
+      </div> */}
     </ProjectsLayout>
   );
 };

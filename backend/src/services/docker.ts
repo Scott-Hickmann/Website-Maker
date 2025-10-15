@@ -14,7 +14,7 @@ async function getAllAssignedPorts(): Promise<number[]> {
   const containers = await docker.listContainers({ all: true });
   const projectContainers = containers.filter(
     (container) =>
-      container.Labels?.project === "december" ||
+      container.Labels?.project === "toyon" ||
       container.Names?.some((name) => name.includes("dec-nextjs-"))
   );
 
@@ -140,7 +140,7 @@ export async function createContainer(
       PortBindings: { "3000/tcp": [{ HostPort: assignedPort.toString() }] },
     },
     Labels: {
-      project: "december",
+      project: "toyon",
       type: "nextjs-app",
       assignedPort: assignedPort.toString(),
     },
@@ -231,11 +231,11 @@ export async function listProjectContainers(): Promise<any[]> {
 
   const projectContainers = containers.filter(
     (container) =>
-      container.Labels?.project === "december" ||
+      container.Labels?.project === "toyon" ||
       container.Names?.some((name) => name.includes("dec-nextjs-"))
   );
 
-  return projectContainers.map((container) => {
+  return Array.from(projectContainers).map((container) => {
     const assignedPort = container.Labels?.assignedPort
       ? parseInt(container.Labels.assignedPort)
       : container.Ports?.find((p) => p.PrivatePort === 3000)?.PublicPort ||
