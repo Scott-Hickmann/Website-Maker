@@ -531,8 +531,9 @@ export const WorkspaceDashboard = ({
             <Link
               href="/"
               className="flex items-center gap-3 text-white/90 hover:text-white transition-colors group"
+              style={{ fontFamily: "avenir", fontWeight: "bold" }}
             >
-              <img src="/westly-logo.png" alt="Toyon" className="w-8 h-8" />
+              Toyon.ai
             </Link>
 
             <div className="h-6 w-px bg-gray-700/50 mx-2" />
